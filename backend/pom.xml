@@ -53,10 +53,11 @@
 
                 <!-- Sonar Maven Plugin Dependency -->
                 <dependency>
-                        <groupId>org.sonarsource.scanner.maven</groupId>
-                        <artifactId>sonar-maven-plugin</artifactId>
-                        <version>5.5.0.6356</version>
-                        <scope>compile</scope>
+                        mvn clean verify sonar:sonar \
+                        -Dsonar.projectKey=studentapp \
+                        -Dsonar.projectName='studentapp' \
+                        -Dsonar.host.url=http://43.205.96.146:9000 \
+                        -Dsonar.token=sqp_8b3536737959bec4af316bbd475f85de90681a08
                 </dependency>
 
         </dependencies>
